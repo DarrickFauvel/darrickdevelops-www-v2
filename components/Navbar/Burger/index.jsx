@@ -16,7 +16,6 @@ const Burger = ({ showMenu, setShowMenu }) => {
       className="text-2xl leading-4 cursor-pointer min-[520px]:hidden"
       onClick={() => {
         setShowMenu((prevState) => !prevState)
-        console.log("burger clicked")
       }}>
       <Icon icon="fa6-solid:bars" />
     </span>
