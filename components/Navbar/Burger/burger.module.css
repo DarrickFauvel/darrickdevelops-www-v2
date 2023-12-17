@@ -1,0 +1,10 @@
+.burger {
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  /* z-index: 10; */
+
+  @media (min-width: 520px) {
+    display: none;
+  }
+}
