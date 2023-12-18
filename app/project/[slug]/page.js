@@ -1,12 +1,14 @@
 // "use client"
 import { projects } from "@/data/data"
 import Image from "next/image"
+import Back from "../components/Back"
 
 export default async function Project({ params }) {
   const project = projects.find((project) => project.slug === params.slug)
 
   return (
     <section className="mt-24">
+      <Back />
       <h1 className="text-2xl font-normal p-4">{project.titleLong}</h1>
       <Image src={project.image} alt={project.title} width={500} height={500} />
       <p className="flex justify-center self-center text-center -mt-4 text-sm font-mono">

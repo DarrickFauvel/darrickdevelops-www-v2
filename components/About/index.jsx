@@ -7,7 +7,7 @@ const About = () => {
     "flex flex-col items-center flex-wrap w-full mx-auto md:flex-row md:justify-center md:max-w-3xl lg:max-w-5xl"
 
   return (
-    <section id="about">
+    <section id="about" className="mt-28 sm:mt-40">
       <div className={`${classesContainer} px-12 py-20 md:flex-row`}>
         <div className="flex flex-col mb-16 items-center text-center md:w-1/2 md:pr-16 md:items-start md:text-left lg:grow lg:pr-24 lg:mb-0">
           <h1 className="text-3xl leading-9 mb-4 font-medium sm:text-4xl sm:leading-10">
