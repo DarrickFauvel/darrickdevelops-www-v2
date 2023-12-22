@@ -1,6 +1,5 @@
-"use client"
-import { Icon } from "@iconify/react"
-import { skills } from "@/data/data"
+import { skills } from "@/public/data/data"
+import { Icon } from "./Elements/Icon"
 
 const Skills = () => {
   const classesContainer =
@@ -10,10 +9,7 @@ const Skills = () => {
     <section id="skills">
       <div className={`${classesContainer} px-5 pt-10 pb-20`}>
         <div className="text-center mb-12">
-          <Icon
-            className="inline-block text-5xl mx-auto mb-4 text-fuchsia-800"
-            icon="heroicons-solid:chip"
-          />
+          <Icon icon="heroicons-solid:chip" variant="section" />
           <h1 className="text-3xl leading-9 font-medium mb-4 sm:text-4xl sm:leading-10">
             Skills &amp; Technologies
           </h1>
@@ -26,10 +22,8 @@ const Skills = () => {
           {skills.map((skill) => (
             <div key={skill} className="p-2 w-full sm:w-1/2">
               <div className="flex items-center bg-gray-800 rounded p-4 h-full">
-                <Icon
-                  className="text-green-400 w-6 h-6 shrink-0 mr-4"
-                  icon="heroicons-solid:badge-check"
-                />
+                <Icon icon="heroicons-solid:badge-check" variant="list" />
+
                 <span className="font-medium text-white">{skill}</span>
               </div>
             </div>

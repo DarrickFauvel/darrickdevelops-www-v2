@@ -1,5 +1,5 @@
 // "use client"
-import { projects } from "@/data/data"
+import { projects } from "@/public/data/data"
 import Image from "next/image"
 import Back from "../components/Back"
 

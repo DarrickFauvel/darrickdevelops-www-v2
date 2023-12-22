@@ -1,7 +1,5 @@
-"use client"
 import { useState } from "react"
 import TechStack from "./TechStack"
-import Modal from "./Modal"
 import Image from "next/image"
 import Link from "next/link"
 
