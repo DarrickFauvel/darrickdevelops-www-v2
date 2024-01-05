@@ -1,4 +1,4 @@
-import { skills } from "@/public/data/data"
+import { skills } from "@/data/data"
 import { Icon } from "./Elements/Icon"
 
 const Skills = () => {

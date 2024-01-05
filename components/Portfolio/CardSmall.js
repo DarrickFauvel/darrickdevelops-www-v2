@@ -16,7 +16,7 @@ const CardSmall = ({ project }) => {
 
   return (
     <>
-      <Link href={`/project/${project.slug}`}>
+      <Link href={`/projects/${project.slug}`}>
         <div className="bg-neutral-800 border-[1px] border-purple-950 rounded-md overflow-hidden w-48 cursor-pointer transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow hover:shadow-green-700 focus:-translate-y-1 focus:shadow-md focus:shadow-green-700">
           <div className="bg-purple-950">
             <h4 className="text-lg font-normal p-2">{project.title}</h4>

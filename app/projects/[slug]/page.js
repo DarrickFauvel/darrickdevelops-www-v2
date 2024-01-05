@@ -1,10 +1,9 @@
-// "use client"
-import { projects } from "@/public/data/data"
 import Image from "next/image"
 import Back from "../components/Back"
+import { getProject } from "@/lib/getData"
 
 export default async function Project({ params }) {
-  const project = projects.find((project) => project.slug === params.slug)
+  const project = getProject(params.slug)
 
   return (
     <section className="mt-24">
@@ -12,10 +11,10 @@ export default async function Project({ params }) {
       <h1 className="text-2xl font-normal p-4">{project.titleLong}</h1>
       <Image src={project.image} alt={project.title} width={500} height={500} />
       <p className="flex justify-center self-center text-center -mt-4 text-sm font-mono">
-        {project.stack.map((item) => {
+        {/* {project.stack.map((item) => {
           const lastItem = project.stack[project.stack.length - 1]
           return item !== lastItem ? `${item} · ` : item
-        })}
+        })} */}
       </p>
       <ul className="flex justify-center items-center gap-6 list-none p-0 mb-5">
         <li>

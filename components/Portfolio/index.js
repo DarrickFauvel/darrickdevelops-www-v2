@@ -1,47 +1,27 @@
-// "use client"
-// import { useState, useEffect } from "react"
-// import { projects as data, tabs } from "@/public/data/data"
-// import Tabs from "./Tabs"
 import Projects from "./Projects"
 import { Icon } from "../Elements/Icon"
+import { getProjects } from "@/lib/getData"
 
-async function getProjects() {
-  const response = await fetch("http://localhost:3000/data/projects.json")
-  const jsonData = await response.json()
-  console.log(jsonData)
-  return jsonData
+async function getAllProjects() {
+  const projects = await getProjects()
+  return projects
 }
 
 const filterProjects = async (category) => {
-  const results = await getProjects().filter((project) => {
+  const projects = await getAllProjects()
+  const filteredResults = projects.filter((project) => {
     if (category === "featured") {
       return project.isFeatured
     } else {
       return project.category.includes(category)
     }
   })
-  // setFilteredProjects(results)
-  console.log(results)
-  return results
+  console.log(filteredResults)
+  return filteredResults
 }
 
 const Portfolio = async () => {
-  // const [projects, setProjects] = useState(data)
-  // const [activeTab, setActiveTab] = useState("Featured")
-  // const [filteredProjects, setFilteredProjects] = useState([])
-  const projects = await getProjects()
-  const filteredProjects = await filterProjects("react")
-
-  // const handleTabClick = (e) => {
-  //   const selectedTab = e.target.innerText
-  //   const selectedCategory = e.target.dataset.category
-  //   setActiveTab(selectedTab)
-  //   filterProjects(selectedCategory)
-  // }
-
-  // useEffect(() => {
-  //   filterProjects("featured")
-  // }, [])
+  const filteredProjects = await filterProjects("featured")
 
   return (
     <section id="portfolio" className="projects">
@@ -57,19 +37,8 @@ const Portfolio = async () => {
           </p>
         </div>
 
-        {/* <Tabs
-          tabs={tabs}
-          activeTab={activeTab}
-          handleTabClick={handleTabClick}
-        /> */}
-
         <div className="tab-content tab-content--sections">
-          {/* <Projects
-            // projects={projects}
-            projects={filteredProjects}
-            activeTab={activeTab}
-            tabs={tabs}
-          /> */}
+          <Projects projects={filteredProjects} />
         </div>
       </div>
     </section>

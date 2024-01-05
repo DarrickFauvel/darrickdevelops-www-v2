@@ -10,6 +10,12 @@ const nextConfig = {
       },
       {
         protocol: "https",
+        hostname: "raw.githubusercontent.com",
+        port: "",
+        pathname: "/chingu-voyages/**",
+      },
+      {
+        protocol: "https",
         hostname: "res.cloudinary.com",
         port: "",
         pathname: "/**",

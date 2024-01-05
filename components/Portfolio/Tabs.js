@@ -1,4 +1,4 @@
-const Tabs = ({ tabs, activeTab, handleTabClick }) => {
+const Tabs = ({ tabs, activeTab }) => {
   const renderTabs = tabs.map((tab) => {
     const classesTab =
       "grow bg-neutral-800 px-5 py-1 transition duration-500 hover:bg-neutral-700 focus:bg-neutral-700"
@@ -8,7 +8,7 @@ const Tabs = ({ tabs, activeTab, handleTabClick }) => {
       <button
         className={tab.title === activeTab ? classesTabActive : classesTab}
         data-category={tab.category}
-        onClick={handleTabClick}
+        // onClick={handleTabClick}
         key={tab.id}>
         {tab.title}
       </button>
