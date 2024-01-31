@@ -6,7 +6,7 @@ import Skills from "@/components/Skills"
 
 export default function Home() {
   return (
-    <main className="mt-20 sm:mt-32 border-[1px] border-orange-500 before:content-['main'] before:text-orange-500">
+    <main>
       <About />
       <Portfolio />
       <Skills />
