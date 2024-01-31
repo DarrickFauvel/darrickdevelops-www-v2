@@ -2,6 +2,7 @@ import Buttons from "./components/buttons"
 import Heading from "./components/heading"
 import Avatar from "./components/avatar"
 import ScrollOffset from "../shared/ScrollOffset"
+import Summary from "./components/summary"
 
 const About = () => {
   const classesContainer =
@@ -10,22 +11,38 @@ const About = () => {
   return (
     <section id="about">
       <ScrollOffset>
-        <div className={`${classesContainer} px-12`}>
+        {/* Show on small screen */}
+        <div className="flex flex-col items-center px-12 mx-auto md:hidden">
+          <Heading />
+          <Summary />
+          <Avatar />
+          <Buttons />
+        </div>
+
+        {/* Show on medium screen */}
+        <div className="hidden md:flex md:flex-row md:justify-center md:gap-10 px-12 mx-auto">
+          <div>
+            <Heading />
+            <Summary />
+            <Buttons />
+          </div>
+          <div>
+            <Avatar />
+          </div>
+        </div>
+        {/* <div className={`${classesContainer} px-12`}>
           <Heading classModifier="hidden md:block" />
-          <div className="flex flex-col md:flex-row mb-16 items-center text-center md:w-1/2 md:pr-16 md:items-start md:text-left lg:grow lg:pr-24 lg:mb-0">
+          <div className="flex flex-col md:flex-row mb-16 items-center text-center md:w-1/2 md:pr-16 md:items-start md:text-left lg:grow lg:pr-24 lg:mb-0 border border-1 border-green-400">
             <Heading classModifier="md:hidden" />
-            <p className="mb-8 leading-7 text-justify">
-              I love coding things from scratch with HTML, CSS, JavaScript, and
-              using the latest library/framework to help get the job done. I'm
-              quietly confident, naturally curious, and perpetually working on
-              improving my chops one dev challenge at a time.
-            </p>
+            <Summary />
             <Avatar classVisibilityModifier="md:hidden" />
             <Buttons classVisibilityModifier="md:hidden" />
           </div>
-          <Avatar classVisibilityModifier="hidden md:block" />
-          <Buttons classVisibilityModifier="hidden md:block" />
-        </div>
+          <div>
+            <Avatar classVisibilityModifier="hidden md:block" />
+            <Buttons classVisibilityModifier="hidden md:block" />
+          </div>
+        </div> */}
       </ScrollOffset>
     </section>
   )
