@@ -13,7 +13,7 @@ const Burger = ({ showMenu, setShowMenu }) => {
   // }
   return (
     <span
-      className="text-2xl leading-4 cursor-pointer min-[520px]:hidden"
+      className="text-2xl leading-4 cursor-pointer min-[575px]:hidden"
       onClick={() => {
         setShowMenu((prevState) => !prevState)
       }}>

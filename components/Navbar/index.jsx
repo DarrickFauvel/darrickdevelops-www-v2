@@ -14,7 +14,7 @@ const Navbar = () => {
     <div className="flex flex-row justify-between items-center p-4 sm:p-10">
       <Brand />
       <Nav />
-      <div className="hidden min-[520px]:flex">
+      <div className="hidden min-[575px]:flex">
         <Socials />
       </div>
 
