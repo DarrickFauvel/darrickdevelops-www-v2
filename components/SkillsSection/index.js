@@ -1,9 +1,9 @@
 import { skills } from "@/data/data"
-import { Icon } from "./Elements/Icon"
-import ScrollOffset from "./shared/ScrollOffset"
-import Container from "./shared/Container"
+import { Icon } from "../Elements/Icon"
+import ScrollOffset from "../shared/ScrollOffset"
+import Container from "../shared/Container"
 
-const Skills = () => {
+const SkillsSection = () => {
   const classesContainer =
     "flex flex-col items-center flex-wrap w-full md:flex-row md:justify-center md:max-w-3xl lg:max-w-5xl"
 
@@ -38,4 +38,4 @@ const Skills = () => {
   )
 }
 
-export default Skills
+export default SkillsSection

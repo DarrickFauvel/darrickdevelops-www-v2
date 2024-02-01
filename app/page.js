@@ -1,17 +1,15 @@
-import About from "@/components/About"
-import Contact from "@/components/Contact"
-import Footer from "@/components/Footer"
-import Portfolio from "@/components/Portfolio"
-import Skills from "@/components/Skills"
+import AboutSection from "@/components/AboutSection"
+import ContactSection from "@/components/ContactSection"
+import PortfolioSection from "@/components/PortfolioSection"
+import SkillsSection from "@/components/SkillsSection"
 
 export default function Home() {
   return (
     <main>
-      <About />
-      <Portfolio />
-      <Skills />
-      <Contact />
-      <Footer />
+      <AboutSection />
+      <PortfolioSection />
+      <SkillsSection />
+      <ContactSection />
     </main>
   )
 }

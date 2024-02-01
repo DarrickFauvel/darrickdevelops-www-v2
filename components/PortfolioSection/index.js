@@ -18,11 +18,10 @@ const filterProjects = async (category) => {
       return project.category.includes(category)
     }
   })
-  console.log(filteredResults)
   return filteredResults
 }
 
-const Portfolio = async () => {
+const PortfolioSection = async () => {
   const filteredProjects = await filterProjects("featured")
 
   return (
@@ -49,4 +48,4 @@ const Portfolio = async () => {
   )
 }
 
-export default Portfolio
+export default PortfolioSection
