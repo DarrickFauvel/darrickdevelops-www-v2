@@ -16,7 +16,7 @@ const Projects = ({ projects }) => {
       <h3 className="text-gray-100 font-medium text-2xl">
         {/* {cardsTitle.subtitle} */}
       </h3>
-      <div className="flex justify-center flex-wrap gap-12">
+      <div className="flex flex-col items-center gap-12">
         {projectsInReverseOrder.map((project) => {
           return <Card project={project} key={project.project_id} />
         })}
