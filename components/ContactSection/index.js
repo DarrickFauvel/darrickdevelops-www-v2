@@ -2,11 +2,11 @@
 import { useState, useRef } from "react"
 import emailjs from "@emailjs/browser"
 import ReCAPTCHA from "react-google-recaptcha"
-import { Icon } from "./Elements/Icon"
-import ScrollOffset from "./shared/ScrollOffset"
-import Container from "./shared/Container"
+import { Icon } from "../Elements/Icon"
+import ScrollOffset from "../shared/ScrollOffset"
+import Container from "../shared/Container"
 
-const Contact = () => {
+const ContactSection = () => {
   const formRef = useRef(null)
   const captchaRef = useRef(null)
 
@@ -160,4 +160,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default ContactSection

@@ -1,6 +1,6 @@
-import Container from "./shared/Container"
+import Container from "../shared/Container"
 
-const Footer = () => {
+const FooterSection = () => {
   const classesContainer =
     "flex flex-col items-center flex-wrap w-full md:flex-row md:justify-center md:max-w-3xl lg:max-w-5xl"
 
@@ -21,4 +21,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default FooterSection

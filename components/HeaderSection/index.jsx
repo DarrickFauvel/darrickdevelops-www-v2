@@ -1,6 +1,6 @@
 import Navbar from "../Navbar"
 
-const Header = () => {
+const HeaderSection = () => {
   return (
     <header className="fixed w-full top-0 bg-purple-950 z-10">
       <Navbar />
@@ -8,4 +8,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default HeaderSection

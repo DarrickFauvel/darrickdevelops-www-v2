@@ -5,7 +5,7 @@ import ScrollOffset from "../shared/ScrollOffset"
 import Summary from "./components/summary"
 import Container from "../shared/Container"
 
-const About = () => {
+const AboutSection = () => {
   const classesContainer =
     "flex flex-col flex-wrap w-full mx-auto md:justify-center md:max-w-3xl lg:max-w-5xl"
 
@@ -50,4 +50,4 @@ const About = () => {
   )
 }
 
-export default About
+export default AboutSection
