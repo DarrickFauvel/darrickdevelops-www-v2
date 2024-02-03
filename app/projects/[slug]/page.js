@@ -10,8 +10,10 @@ export default async function Project({ params }) {
     <section className="mt-24">
       <Container>
         <Back />
+
         <h1 className="text-2xl font-normal p-4">{project.titleLong}</h1>
         <Image
+          className="rounded-lg"
           src={project.image}
           alt={project.title}
           width={500}
