@@ -2,6 +2,7 @@ import Image from "next/image"
 import Back from "../components/Back"
 import { getProject } from "@/lib/getData"
 import Container from "@/components/shared/Container"
+import ButtonLink from "../components/ButtonLink"
 
 export default async function Project({ params }) {
   const project = getProject(params.slug)
@@ -27,18 +28,15 @@ export default async function Project({ params }) {
         </p>
         <ul className="flex justify-center items-center gap-6 list-none p-0 mb-5">
           <li>
-            <a
-              className="flex items-center gap-2 bg-gray-800 py-2 px-6 rounded border-[1px] border-gray-700 transition duration-500 hover:bg-gray-700 hover:text-white"
-              href={project.liveUrl}
-              target="_blank">
+            <ButtonLink project={project}>
               <Image
                 src="/netlify-logo-cropped.png"
                 alt="Netlify logo"
                 width={32}
                 height={32}
               />
-              <span>Demo</span>
-            </a>
+              Demo
+            </ButtonLink>
           </li>
           <li>
             <a
