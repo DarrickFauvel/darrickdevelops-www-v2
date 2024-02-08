@@ -18,6 +18,7 @@ export default async function Project({ params }) {
           alt={project.title}
           width={500}
           height={500}
+          priority
         />
         <p className="flex justify-center self-center text-center -mt-4 text-sm font-mono">
           {/* {project.stack.map((item) => {
