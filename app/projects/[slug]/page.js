@@ -51,6 +51,7 @@ export default async function Project({ params }) {
             <span>Code</span>
           </ButtonLink>
         </ButtonGroup>
+
         <div className="bg-neutral-700 rounded p-4 pb-1">
           <header className="text-center border-[1px] border-dashed border-neutral-400 pb-1 -mt-2 mb-4 bg-transparent">
             ABOUT THIS PROJECT
