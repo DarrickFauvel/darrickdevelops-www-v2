@@ -2,7 +2,9 @@ import Image from "next/image"
 import Back from "../components/Back"
 import { getProject } from "@/lib/getData"
 import Container from "@/components/shared/Container"
+import ButtonGroup from "../components/ButtonLinksGroup"
 import ButtonLink from "../components/ButtonLink"
+import ButtonImage from "../components/ButtonImage"
 
 export default async function Project({ params }) {
   const project = getProject(params.slug)
@@ -19,41 +21,37 @@ export default async function Project({ params }) {
           alt={project.title}
           width={500}
           height={500}
+          priority
         />
-        <p className="flex justify-center self-center text-center -mt-4 text-sm font-mono">
-          {/* {project.stack.map((item) => {
+        {/* <p className="flex justify-center self-center text-center -mt-4 text-sm font-mono">
+          {project.stack.map((item) => {
             const lastItem = project.stack[project.stack.length - 1]
             return item !== lastItem ? `${item} · ` : item
-          })} */}
-        </p>
-        <ul className="flex justify-center items-center gap-6 list-none p-0 mb-5">
-          <li>
-            <ButtonLink project={project}>
-              <Image
-                src="/netlify-logo-cropped.png"
-                alt="Netlify logo"
-                width={32}
-                height={32}
-              />
-              Demo
-            </ButtonLink>
-          </li>
-          <li>
-            <a
-              className="flex items-center gap-2 bg-gray-800 py-2 px-6 rounded border-[1px] border-gray-700 transition duration-500 hover:bg-gray-700 hover:text-white"
-              href={project.repoUrl}
-              target="_blank">
-              <Image
-                className="invert-[.75]"
-                src="/github-icon-logo-png-transparent.png"
-                alt="GitHub logo"
-                width={32}
-                height={32}
-              />
-              <span>Code</span>
-            </a>
-          </li>
-        </ul>
+          })}
+        </p> */}
+        <ButtonGroup>
+          <ButtonLink link={project.liveUrl}>
+            <ButtonImage
+              attributes={{
+                src: "/netlify-logo-cropped.png",
+                alt: "Netlify logo",
+              }}
+            />
+            <span>Demo</span>
+          </ButtonLink>
+
+          <ButtonLink link={project.repoUrl}>
+            <ButtonImage
+              className="invert-[.75]"
+              attributes={{
+                src: "/github-icon-logo-png-transparent.png",
+                alt: "GitHub logo",
+              }}
+            />
+            <span>Code</span>
+          </ButtonLink>
+        </ButtonGroup>
+
         <div className="bg-neutral-700 rounded p-4 pb-1">
           <header className="text-center border-[1px] border-dashed border-neutral-400 pb-1 -mt-2 mb-4 bg-transparent">
             ABOUT THIS PROJECT
